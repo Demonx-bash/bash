@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	<title>DEMONX PLUS</title>
+</head>
+<body>
+	<header>
+		<div class="contenedor">
+			<h2 class="logotipo">DEMONX PLUS</h2>
+			<nav>
+				<a href="#" class="activo" onclick="mostrarPaginaPrincipal()">Inicio</a>
+				<a href="#">Programas</a>
+				<a href="#">Películas</a>
+				<a href="#">Más Recientes</a>
+				<a href="#">Mi lista</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<!-- Página Principal -->
+		<div id="pagina-principal">
+			<div class="pelicula-principal">
+				<div class="contenedor">
+					<h3 class="titulo">Arcane</h3>
+					<p class="descripcion">
+						Las ciudades de Pivotel y Zaun han llegado a un punto crítico. Un fatídico enfrentamiento ha cambiado las dos ciudades para siempre...
+					</p>
+					<button role="button" class="boton" onclick="mostrarDetalles()">Ver Episodios</button>
+				</div>
+			</div>
+		</div>
+
+<!-- Lista de Episodios -->
+<div id="episodios" style="display: none;">
+	<div class="contenedor">
+		<!-- Imagen grande en la parte superior -->
+		<div class="imagen-banner">
+			<img src="img/fondo-episodios.jpg" alt="Imagen de Cabecera">
+		</div>
+
+		<h3 class="titulo">Episodios de Arcane - Temporada 1</h3>
+		<ul class="lista-episodios">
+			<li><button onclick="verEpisodio(1)">Episodio 1 - El Peso del Lierazgo</button></li>
+			<li><button onclick="verEpisodio(2)">Episodio 2 - El Ver como se quema todo</button></li>
+			<li><button onclick="verEpisodio(3)">Episodio 3 - Por fin pudiste pronunciar mi nombre</button></li>
+			<li><button onclick="verEpisodio(4)">Episodio 4 - Pintemos la ciudad de azul</button></li>
+			<li><button onclick="verEpisodio(5)">Episodio 5 - Ampollas y rocas</button></li>
+			<li><button onclick="verEpisodio(6)">Episodio 6 - El mensaje oculto</button></li>
+			<li><button onclick="verEpisodio(7)">Episodio 7 - EN ESPERA</button></li>
+			<li><button onclick="verEpisodio(8)">Episodio 8 - EN ESPERA</button></li>
+			<li><button onclick="verEpisodio(9)">Episodio 9 - EN ESPERA</button></li>
+		</ul>
+		<button class="boton" onclick="mostrarPaginaPrincipal()">Volver</button>
+	</div>
+</div>
+
+
+		<!-- Reproductor del Episodio -->
+		<div id="reproductor" style="display: none;">
+			<div class="contenedor">
+				<h3 id="titulo-episodio" class="titulo"></h3>
+				<video id="video-episodio" controls width="100%">
+					<source id="video-source" type="video/mp4">
+					Tu navegador no soporta la reproducción de videos.
+				</video>
+				<p id="error-video" style="display: none; color: red;">El video no está disponible. Por favor, verifica la conexión o intenta más tarde.</p>
+				<button class="boton" onclick="mostrarDetalles()">Volver a Episodios</button>
+			</div>
+		</div>
+	</main>
+
+
+	<script src="js/main.js"></script>
+</body>
+</html>
+
